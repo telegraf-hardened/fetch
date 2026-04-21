@@ -1,8 +1,9 @@
 {
   "name": "@telegraf-hardened/fetch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Native fetch wrapper for Node.js 18+ with built-in SOCKS5 and HTTP/HTTPS proxy support via undici dispatchers.",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
   "engines": {
@@ -16,11 +17,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.js"
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
   },
   "scripts": {
-    "build": "rimraf dist && tsc",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "clean": "rimraf dist"
@@ -48,6 +50,7 @@
   "devDependencies": {
     "@types/node": "^25.6.0",
     "rimraf": "^6.1.3",
+    "tsup": "^8.5.1",
     "typescript": "^6.0.3"
   }
 }
