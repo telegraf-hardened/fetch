@@ -67,4 +67,4 @@ client.fetch(url, init)
 ```
 
 License
-MIT © siakinnik
+MIT © 2026 Telegraf Hardened Community
