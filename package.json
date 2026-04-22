@@ -1,6 +1,6 @@
 {
   "name": "@telegraf-hardened/fetch",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Native fetch wrapper for Node.js 18+ with built-in SOCKS5 and HTTP/HTTPS proxy support via undici dispatchers.",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
