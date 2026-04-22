@@ -21,7 +21,7 @@
     }
   },
   "scripts": {
-    "build": "tsup src/index.ts --format cjs,esm --dts --clean --splitting --sourcemap --out-extension .cjs=cjs .esm=mjs",
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean --sourcemap --out-extension .cjs=cjs --out-extension .esm=mjs",
     "prepare": "npm run build",
     "prepublishOnly": "npm run build",
     "clean": "rimraf dist"
